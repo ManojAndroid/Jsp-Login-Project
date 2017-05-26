@@ -6,79 +6,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
-
+<link rel = "stylesheet" type = "text/css" href = "css/signup.css" />
 
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<style>
-body {
-	background-color:white;
-}
-
-::-webkit-input-placeholder {
-	font-size: 16px;
-	text-align: center;
-	font-weight: bold;
-}
-form{
-border: 1px solid white;
-background-color:white;
-padding-top: 10px;
-padding-top: 5px;
-height: 344px; 
-width: 422px;
-}
-
-.div {
-	align: center;
-	border: 1px solid white;
-	width: 43%;;
-	height: 450px;
-	margin-left:286px;
-	align: center;
-	background-color:white;
-	box-shadow: 1px 1px 1px 1px;
-	margin-top: 8%;
-}
-input
-{
-width: 315px;
- height: 40px;
- border: 0px;
- border-bottom: 1px solid black;
-}
-
-
-</style>
-<script type="text/javascript">
-	function ValidateEmail() {
-		var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-		var email = document.getElementById("eid").value;
-		var pass = document.getElementById("passid").value;
-		var firstname = document.getElementById("fname").value;
-		var lname = document.getElementById("lname").value;
-		if (firstname.length == " " || firstname == null||firstname.length<=3) {
-			alert("Enter FirstName Length should be more than three characters!");
-			return false;
-		}
-		if (lname.length == " " || lname == null||lname.length<=3) {
-			alert("Enter LastName Length should be more than three characters!!");
-			return false;
-		} 
-		if (!email.match(mailformat) || email == null) {
-			alert("Enter valid email address!");
-			return false;
-		}
-		if (pass.length == " " || pass == null||pass.length<=6) {
-			alert("Enter Password Length should be more than three characters!!!");
-			return false;
-		}
-		
-		else {
-			return true;
-		}
-	}
-</script>
+<script type="text/javascript" src="js/signup.js"></script>
 <body>
 	<div class="div" align="center">
 		<label><h3>

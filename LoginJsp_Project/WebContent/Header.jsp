@@ -16,42 +16,57 @@
 	<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
 	<div class="container-fluid">
 		<div class="navbar-header">
-		<%if(session.getAttribute("fpassword")!=null) {%>
-			<a class="navbar-brand" href="#"> <span class="glyphicon glyphicon-home"></span>Home</a>
-			<%} %>
+			<%
+				if (session.getAttribute("fpassword") != null) {
+			%>
+			<a class="navbar-brand" href="#"> <span
+				class="glyphicon glyphicon-home"></span>Home
+			</a>
+			<%
+				}
+			%>
 		</div>
 		<ul class="nav navbar-nav">
-			<%if(session.getAttribute("fpassword")!=null) {%>
-			<li><a href="ViewData"><span class="glyphicon glyphicon-edit"></span>UpdateEmployees Details</a></li>
-			<%} %>
+			<%
+				if (session.getAttribute("fpassword") != null) {
+			%>
+			<li><a href="ViewData"><span
+					class="glyphicon glyphicon-edit"></span>UpdateEmployees Details</a></li>
+			<%
+				}
+			%>
 
-			<%if(session.getAttribute("fpassword")!=null) {%>
-			<li><a href="form"> <span class="glyphicon glyphicon-refresh"></span>Register New Employee </a></li>
-			<%} %>
-			<%if(session.getAttribute("fpassword")!=null) {%>
-			<li><a href="DisplayDetails"><span class="glyphicon glyphicon-blackboard"></span> Display Employees Details</a></li>
-			<%} %>
+			<%
+				if (session.getAttribute("fpassword") != null) {
+			%>
+			<li><a href="form"> <span
+					class="glyphicon glyphicon-refresh"></span>Register New Employee
+			</a></li>
+			<%
+				}
+			%>
+			<%
+				if (session.getAttribute("fpassword") != null) {
+			%>
+			<li><a href="DisplayDetails"><span
+					class="glyphicon glyphicon-blackboard"></span> Display Employees
+					Details</a></li>
+			<%
+				}
+			%>
 
 		</ul>
 
 		<ul class="nav navbar-nav navbar-right">
-			<%-- <%if(session.getAttribute("fpassword")==null){ %>
-			<li><a href="signup"><span class="glyphicon glyphicon-user"></span>
-					Sign Up</a></li>
 
-			<%} %> --%>
-			<%-- <%if(session.getAttribute("fpassword")==null){ %>
-
-
-			<li><a href="login"><span class="glyphicon glyphicon-log-in"></span>
-					Login</a></li>
-			<%} %> --%>
-			<%if(session.getAttribute("fpassword")!=null){%>
-
-
+			<%
+				if (session.getAttribute("fpassword") != null) {
+			%>
 			<li><a href="LogoutServlet"><span
 					class="glyphicon glyphicon-log-in"></span> Logout</a></li>
-			<% }%>
+			<%
+				}
+			%>
 		</ul>
 	</div>
 	</nav>

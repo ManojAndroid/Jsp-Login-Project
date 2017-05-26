@@ -1,9 +1,14 @@
-td ,th{
+td, th {
 	padding: 10px;
 }
-th{
+
+th {
 	background-color: #7397b1;
 }
-tr{
+
+tr {
 	background-color: #e3f2fd;
+}
+tr:nth-child(odd) {
+	background: #e3f2fd;
 }

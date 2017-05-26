@@ -54,7 +54,7 @@ public class DisplayServlet extends HttpServlet {
 				  printWriter.println("<body><center>"); printWriter.println(
 				  "<table border='1px solid black; align='center' width='100%'"
 				  ); printWriter.print(
-				  "<tr><th>Emp_Id</th><th>FirstName</th> <th>LastName</th> <th>Age</th> <th>Language</th><th>Gender</th><th>Skills</th><th>Address</th></tr>"
+				  "<tr class='nth'><th>Emp_Id</th><th>FirstName</th> <th>LastName</th> <th>Age</th> <th>Language</th><th>Gender</th><th>Skills</th><th>Address</th></tr>"
 				 );
 				 
 				while (resultSet.next()) {

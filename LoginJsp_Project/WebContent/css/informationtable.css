@@ -1,0 +1,22 @@
+.inputs {
+	background-color: #e3f2fd;;
+	padding: 5px;
+	width:100%;
+	border: none;
+}
+#try{
+	padding: 55px;
+    width: 66%;
+    height: 150px;
+    margin-top: 33%;
+    margin-left: 10%;
+}
+#ok,#cancel{
+	height: 49px;
+    width: 100px;
+    margin-left: 31px;
+
+}
+p{
+   padding-left: 35px;
+}

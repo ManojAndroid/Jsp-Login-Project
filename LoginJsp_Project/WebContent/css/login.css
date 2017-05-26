@@ -1,0 +1,35 @@
+body {
+	background-color: white;
+}
+
+::-webkit-input-placeholder {
+	font-size: 16px;
+	text-align: center;
+	font-weight: bold;
+}
+.div {
+	align: center;
+	border: 1px solid white;
+	width: 43%;
+	height: 320px;
+	margin-left: 286px;
+	align: center;
+	background-color: white;
+	box-shadow: 1px 1px 1px 1px;
+	margin-top: 8%;
+}
+
+input {
+	width: 315px;
+	height: 40px;
+	border: 0px;
+	border-bottom: 1px solid black;
+}
+
+form {
+	border: 1px solid white;
+	background-color: white;
+	padding-top: 10px;
+	height: 220px;
+	width: 418px
+}

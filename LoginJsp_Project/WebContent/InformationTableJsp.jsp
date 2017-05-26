@@ -7,72 +7,17 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+ <link rel = "stylesheet" type = "text/css"href = "css/informationtable.css" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+<script src="js/informationtable.js"></script>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script>
-var userid;
-	var get = function(id, fname, sname, age, language, gender, skill, address) {
-		userid=id;
-		var iNum = parseInt(age);
-		$("#uid").val(userid);
-		$("#id").val(id);
-		$("#fname").val(fname);
-		$("#sname").val(sname);
-		$("#age").val(iNum);
-		$("#language").val(language);
-		$("#gender").val(gender);
-		$("#skill").val(skill);
-		$("#address").val(address);
-	}
-	function Validation()
-	{
-		var gender = document.getElementById("gender").value;
-		var age = document.getElementById("age").value;
-		if (age>=120)
-			{
-			alert("Enter  valid age!!! ");
-			return false;
-			}
-	   if (gender!='male'&& gender!='MALE'&& gender!='female' && gender!='FEMALE') 
-		{
-			alert("Enter Valid Gender!");
-			return false;
-			
-		 } 
-		else {
-			
-			return true;
-		}
-	} 
-</script>
-<style type="text/css">
-.inputs {
-	background-color: #e3f2fd;;
-	padding: 5px;
-	width:100%;
-	border: none;
-}
-#try{
-	padding: 55px;
-    width: 66%;
-    height: 150px;
-    margin-top: 33%;
-    margin-left: 10%;
-}
-#ok,#cancel{
-	height: 49px;
-    width: 100px;
-    margin-left: 31px;
 
-}
-p{
-   padding-left: 35px;
-}
-</style>
+
+</script>
 </head>
 <body>
 <jsp:include page="Header.jsp" />
