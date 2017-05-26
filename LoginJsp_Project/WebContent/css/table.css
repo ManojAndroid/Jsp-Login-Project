@@ -1,0 +1,9 @@
+td ,th{
+	padding: 10px;
+}
+th{
+	background-color: #7397b1;
+}
+tr{
+	background-color: #e3f2fd;
+}
