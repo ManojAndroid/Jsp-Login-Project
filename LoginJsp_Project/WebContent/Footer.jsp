@@ -49,15 +49,16 @@
     
     <div class="footer-bottom">
         <div class="container">
-            <p class="pull-left"> Copyright © Footer dihfkjashfkjasf </p>
-           <!--  <div class="pull-right">
+            <p class="pull-left"> Copyright © 2017 Manoj Singh </p>
+           <div class="pull-right">
                 <ul class="nav nav-pills payments">
-                	<li><i class="fa fa-cc-visa"></i></li>
-                    <li><i class="fa fa-cc-mastercard"></i></li>
-                    <li><i class="fa fa-cc-amex"></i></li>
-                    <li><i class="fa fa-cc-paypal"></i></li>
+                   <li><a href="https://twitter.com/login" target="_blank" target="_blank" class="btn btn-block btn-social btn-twitter"><span class="fa fa-twitter"></span>  Twitter</a></li>
+                   <li><a href="https://www.facebook.com" target="_blank" class="btn btn-block btn-social btn-facebook"><span class="fa fa-facebook"></span> FaceBook</a></li>
+                   <li><a href="https://www.instagram.com/accounts/login/" target="_blank"  class="btn btn-block btn-social btn-instagram"><span class="fa fa-instagram"></span> Instagram</a></li>
+                   <li><a href="https://in.linkedin.com/" target="_blank" class="btn btn-block btn-social btn-linkedin"><span class="fa fa-linkedin"></span> Linked in</a></li>
+                   <li><a href="https://github.com/" target="_blank" class="btn btn-block btn-social btn-github"><span class="fa fa-github"></span> GitHub</a></li>
                 </ul> 
-            </div> -->
+            </div> 
         </div>
     </div>
 </footer>

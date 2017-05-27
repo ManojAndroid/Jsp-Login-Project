@@ -23,14 +23,13 @@ public class DisplayServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		request.getRequestDispatcher("Header.jsp").include(request, response);
-           
+		HttpSession httpSession = request.getSession();
 		PrintWriter printWriter = response.getWriter();
 
-		HttpSession httpSession = request.getSession();
 		String fpassword = (String) httpSession.getAttribute("fpassword");
 		if (fpassword == null || fpassword == " ") {
 			printWriter.println("Session out login Again");
-			// response.sendRedirect("lj2");
+
 		} else {
 			Connection connection = null;
 			PreparedStatement preparedStatement = null;
@@ -47,35 +46,31 @@ public class DisplayServlet extends HttpServlet {
 				preparedStatement.setString(1, fpassword);
 				resultSet = preparedStatement.executeQuery();
 				int i = 1;
-				
-				  printWriter.println("<html>"); printWriter.
-				  println("<head><link rel='stylesheet' href='css/table.css' type='text/css'> "
-				  ); printWriter.println("</head> ");
-				  printWriter.println("<body><center>"); printWriter.println(
-				  "<table border='1px solid black; align='center' width='100%'"
-				  ); printWriter.print(
-				  "<tr class='nth'><th>Emp_Id</th><th>FirstName</th> <th>LastName</th> <th>Age</th> <th>Language</th><th>Gender</th><th>Skills</th><th>Address</th></tr>"
-				 );
-				 
+
+				printWriter.println("<html>");
+				printWriter.println("<head><link rel='stylesheet' href='css/table.css' type='text/css'> ");
+				printWriter.println("</head> ");
+				printWriter.println("<body><center>");
+				printWriter.println("<table border='1px solid black; align='center' width='100%'");
+				printWriter.print(
+						"<tr class='nth'><th>Emp_Id</th><th>FirstName</th> <th>LastName</th> <th>Age</th> <th>Language</th><th>Gender</th><th>Skills</th><th>Address</th></tr>");
+
 				while (resultSet.next()) {
-				
-					 printWriter.print("<tr><td>" +
-							 resultSet.getString(9) +"</td>" + "<td>" +
-					         resultSet.getString(1) +"</td>" + "<td>" +
-							 resultSet.getString(2) + "</td>" + "<td>" +
-							 resultSet.getString(3) + "</td>" + "<td>" +
-			                 resultSet.getString(4) + "</td>" + "<td>" +
-					         resultSet.getString(5) + "</td>" + "<td>" +
-					         resultSet.getString(6) + "</td>" + "<td>" +
-					         resultSet.getString(7) + "</td>" + "</td></tr>"); i++;
-					
+
+					printWriter.print("<tr><td>" + resultSet.getString(9) + "</td>" + "<td>" + resultSet.getString(1)
+							+ "</td>" + "<td>" + resultSet.getString(2) + "</td>" + "<td>" + resultSet.getString(3)
+							+ "</td>" + "<td>" + resultSet.getString(4) + "</td>" + "<td>" + resultSet.getString(5)
+							+ "</td>" + "<td>" + resultSet.getString(6) + "</td>" + "<td>" + resultSet.getString(7)
+							+ "</td>" + "</td></tr>");
+					i++;
+
 				}
-				
-				 printWriter.println("<center></table>");
-				  printWriter.println("</body>");
-				  
-				  printWriter.println("</html>");
-				 
+
+				printWriter.println("<center></table>");
+				printWriter.println("</body>");
+
+				printWriter.println("</html>");
+
 			} catch (ClassNotFoundException | SQLException e) {
 				e.printStackTrace();
 

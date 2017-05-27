@@ -7,19 +7,16 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
- <link rel = "stylesheet" type = "text/css"href = "css/informationtable.css" />
+<link rel = "stylesheet" type = "text/css"href = "css/informationtable.css" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script src="js/informationtable.js"></script>
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script>
-
-
-</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
+<%
+		if (session.getAttribute("fpassword") != null) {
+	%>
 <jsp:include page="Header.jsp" />
 	  <% ResultSet rs = (ResultSet) session.getAttribute("data");%>
 <div class="container">
@@ -50,6 +47,7 @@
 				<%
 					}
 				%>
+				
 			</tr>
 		</table>
 	</div>
@@ -75,7 +73,7 @@
 						   
 						    <tr><tH>Age</tH>
 							  <td> <input type="number" id="age"  name="age" class="inputs" required ><br> <br></td></tr>
-							
+							https://github.com/
 							<tr><tH>Language</tH>
 						    <td><input type="text" id="language"  name="language"  class="inputs"> <br><br></td></tr>
 							
@@ -110,6 +108,17 @@
 	 </div>
   </div>
   	<jsp:include page="Footer.jsp" />
-  
+  	<%
+		}
+	%>
+  <%
+		if (session.getAttribute("fpassword") == null) {
+	%>
+	<a href="login"> Login First Session out</a>
+	
+	<%
+		}
+	%>
+	
 </body>
 </html>

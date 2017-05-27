@@ -12,6 +12,7 @@
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script type="text/javascript" src="js/signup.js"></script>
 <body>
+
 	<div class="div" align="center">
 		<label><h3>
 				<u>USER SIGNUP PAGE</u>

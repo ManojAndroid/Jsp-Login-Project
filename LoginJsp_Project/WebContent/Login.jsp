@@ -14,26 +14,21 @@
 		if (session.getAttribute("fpassword") == null) {
 	%>
 	<div class="div" align="center" style="">
-		<label><h3>
-				Welcome To Login Page
-			</h3></label>
+	<label><h3>Welcome To Login Page</h3></label>
+	
 		<form method="post">
-
-			<label><span class="glyphicon glyphicon-envelope"></span><input type="email" name="Email" id="eid"
-				placeholder="Enter Email"></label> <br> <br> <label>
-				<span class="glyphicon glyphicon-lock"></span><input type="password" id="passid" name="Password"
-				placeholder="Enter Password">
-			</label> <br> <br>
-			<label><%if(getServletContext().getAttribute("msg")!=null) {%>
-			<label><p><font color="red">Wrong Password/Email Try Again?</font></p></label>
+		<label><span class="glyphicon glyphicon-envelope"></span><input type="email" name="Email" id="eid" placeholder="Enter Email"></label> 
+		 <br> <br> 
+		<label><span class="glyphicon glyphicon-lock"></span><input type="password" id="passid" name="Password" placeholder="Enter Password"></label>
+		 <br> <br>
+		<label><%if(session.getAttribute("msg")!=null) {%>
+		<label><p><font color="red">Wrong Password/Email Try Again?</font></p></label>
 			<%} %> 
-			<br> <input type="submit" class="btn btn-info"
-				onclick=" return ValidateEmail()" formaction="LoginToFormjspServlet"
-				value="Login" style="width: 300px; height: 45px"> <br>
-
+		<br> 
+		<input type="submit" class="btn btn-info" onclick=" return ValidateEmail()" formaction="LoginToFormjspServlet" value="Login" style="width: 300px; height: 45px">
+		 <br>
 		</form>
 		<label><p> Not Registered?<a href="signup">Register here</a></p></label>
-
 	</div>
 	<%
 		}

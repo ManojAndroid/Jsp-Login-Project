@@ -56,8 +56,10 @@ public class LoginToFormjspServlet extends HttpServlet {
 				response.sendRedirect("form");
 
 			} else {
-				ServletContext context=request.getServletContext();
-				context.setAttribute("msg", password);
+				HttpSession session1=request.getSession();
+				session1.setAttribute("msg", password);
+				session1.setMaxInactiveInterval(1000);
+
 				response.sendRedirect("login");
 				
 			}

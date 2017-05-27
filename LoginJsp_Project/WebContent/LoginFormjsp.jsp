@@ -16,10 +16,10 @@ form {
 }
 </style>
 <body bgcolor="#e3f2fd">
-	<jsp:include page="Header.jsp" />
-	<%
+ <%
 		if (session.getAttribute("fpassword") != null) {
 	%>
+	<jsp:include page="Header.jsp" />
 	<center>
 		<form action="RegistrationLoginUserServlet" method="post" name="reg"
 			style="background-color: #e3f2fd; width: 41%; border: 1px solidblack;">
@@ -119,6 +119,16 @@ form {
 		</form>
 	</center>
 		<jsp:include page="Footer.jsp" />
+	
+	<%
+		}
+	%>
+	<%
+		if (session.getAttribute("fpassword") == null) {
+	%>
+	<a href="login"> Session out Login First</a>
+	
+	
 	
 	<%
 		}

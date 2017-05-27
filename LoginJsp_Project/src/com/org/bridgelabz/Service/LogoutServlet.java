@@ -17,8 +17,6 @@ public class LogoutServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		ServletContext context=request.getServletContext();
-		context.setAttribute("msg", null);
 
 		HttpSession session = request.getSession(false);
 		if (session.getAttribute("fpassword") != null) {

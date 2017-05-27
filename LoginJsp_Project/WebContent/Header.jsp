@@ -8,7 +8,6 @@
 </head>
 <style>
 </style>
-<!-- Latest compiled and minified CSS -->
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -63,7 +62,7 @@
 				if (session.getAttribute("fpassword") != null) {
 			%>
 			<li><a href="LogoutServlet"><span
-					class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+					class="glyphicon glyphicon-log-out"></span> Logout</a></li>
 			<%
 				}
 			%>
